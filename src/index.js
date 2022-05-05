@@ -1,23 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   
-const form = document.querySelector("form")
-const tasks = document.querySelector("#tasks")
+const newForm = document.querySelector("form")
+const newTasks = document.querySelector("#tasks")
 
 
-form.addEventListener("submit",(e)=>{
-  e.preventDefault()
- const inputValue = e.target.task.value
- createToDo(inputValue)
+newForm.addEventListener("submit",(event)=>{
+  event.preventDefault()
+ const result = e.target.task.value
+ createToDo(result)
 })
 
 
 
 function createToDo(element){
-  let p = document.createElement("p")
-  let button = document.createElement("button");
-  let priority = document.createElement('select');
-  let calander = document.createElement('tag');
+  let p = document.createElement("p") //where we want out typed description to be located. 
+  let button = document.createElement("button"); //this is delete button
+  let priority = document.createElement('select');// this is the priority list
+  let calander = document.createElement('tag'); //this is date assignment is due. 
  
 
   p.textContent = `${element}`
